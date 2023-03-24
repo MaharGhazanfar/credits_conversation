@@ -1,3 +1,4 @@
+import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -142,6 +143,98 @@ class CustomProfileField extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+}
+
+class ImageTitleCard extends StatelessWidget {
+  final String title;
+  final String imagePath;
+
+  ImageTitleCard({required this.title, required this.imagePath});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: goldenColor,
+      shape: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+      elevation: 2.0,
+      child: Stack(
+        children: <Widget>[
+          // Image on the back
+          Positioned.fill(
+            child: Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: Image.asset(
+                  imagePath,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+          ),
+          // Title on the image
+          Positioned(
+            bottom: 0.0,
+            left: 0.0,
+            right: 0.0,
+            child: Container(
+              padding: EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: <Color>[
+                    Colors.transparent,
+                    Colors.black.withOpacity(0.7),
+                  ],
+                ),
+              ),
+              child: Text(
+                title,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CustomListile extends StatelessWidget {
+  final String title;
+  final IconData leadingIcon;
+  final Widget? trailingIcon;
+  final void Function()? onTap;
+  const CustomListile(
+      {Key? key,
+      required this.title,
+      this.onTap,
+      this.leadingIcon = Icons.check,
+      this.trailingIcon})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(
+        leadingIcon,
+        color: goldenColor,
+      ),
+      onTap: onTap,
+      trailing: trailingIcon,
+      horizontalTitleGap: 0,
+      title: Text(title,
+          style: Theme.of(context)
+              .textTheme
+              .titleSmall!
+              .copyWith(color: Colors.black54)),
     );
   }
 }
