@@ -1,12 +1,12 @@
 import 'package:badges/badges.dart';
 import 'package:credit_and_conversation/custom_widgets/customTextField.dart';
-import 'package:credit_and_conversation/presentation/password_change.dart';
 import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl_phone_field/country_picker_dialog.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
+import 'discovery_page.dart';
 import 'login_screen.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -185,7 +185,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ChangePassword(),
+                          builder: (context) => const DiscoveryPage(),
                         ));
                   },
                 ),

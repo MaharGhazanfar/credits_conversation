@@ -64,7 +64,7 @@ class _AllCoursesPageState extends State<AllCoursesPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => CourseDetail(),
+                                builder: (context) => const CourseDetail(),
                               ));
                         },
                         child: ImageTitleCard(

@@ -1,8 +1,5 @@
 import 'package:credit_and_conversation/custom_widgets/customTextField.dart';
-import 'package:credit_and_conversation/presentation/courses.dart';
 import 'package:credit_and_conversation/presentation/discovery_page.dart';
-import 'package:credit_and_conversation/presentation/notification_page.dart';
-import 'package:credit_and_conversation/presentation/password_change.dart';
 import 'package:credit_and_conversation/presentation/sign_up_page.dart';
 import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:flutter/material.dart';
@@ -73,10 +70,10 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 CustomGoldenButton(
-                  buttonTitle: 'Login to App',
+                  buttonTitle: 'Login',
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const ChangePassword(),
+                      builder: (context) => const DiscoveryPage(),
                     ));
                   },
                 ),
@@ -92,13 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                         style: ElevatedButton.styleFrom(
                             shape: const CircleBorder(),
                             backgroundColor: Colors.white),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => NotificationPage(),
-                              ));
-                        },
+                        onPressed: () {},
                         child: Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: Icon(
@@ -110,13 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                         style: ElevatedButton.styleFrom(
                             shape: const CircleBorder(),
                             backgroundColor: Colors.white),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => CoursesPage(),
-                              ));
-                        },
+                        onPressed: () {},
                         child: Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: Icon(
@@ -128,13 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                         style: ElevatedButton.styleFrom(
                             shape: const CircleBorder(),
                             backgroundColor: Colors.white),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => DiscoveryPage(),
-                              ));
-                        },
+                        onPressed: () {},
                         child: Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: Icon(

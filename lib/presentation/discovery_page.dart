@@ -1,5 +1,6 @@
 import 'package:credit_and_conversation/custom_widgets/customTextField.dart';
 import 'package:credit_and_conversation/presentation/courses_list.dart';
+import 'package:credit_and_conversation/presentation/notification_page.dart';
 import 'package:credit_and_conversation/presentation/setting_page.dart';
 import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:flutter/cupertino.dart';
@@ -57,96 +58,100 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
               SizedBox(
                 height: mq!.height * 0.03,
               ),
-              Card(
-                // color: Colors.green,
-                elevation: 5,
-                shape: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: const BorderSide(color: Colors.transparent)),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: SizedBox(
-                    width: mq!.width * 0.7,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12.0),
-                          child: CircleAvatar(
-                            backgroundColor: goldenColor,
-                            radius: 22,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SettingPage(),
+                      ));
+                },
+                child: Card(
+                  elevation: 5,
+                  shape: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(color: Colors.transparent)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
+                    child: SizedBox(
+                      width: mq!.width * 0.7,
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 12.0),
                             child: CircleAvatar(
-                              backgroundColor: Colors.white,
-                              child: Icon(
-                                Icons.person,
-                                size: mq!.width * 0.07,
+                              backgroundColor: goldenColor,
+                              radius: 22,
+                              child: CircleAvatar(
+                                backgroundColor: Colors.white,
+                                child: Icon(
+                                  Icons.person,
+                                  size: mq!.width * 0.07,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Keshia carr',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleMedium!
-                                    .copyWith(color: Colors.black),
-                              ),
-                              SizedBox(
-                                height: mq!.height * 0.01,
-                              ),
-                              Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(right: 4.0),
-                                    child: Text(
-                                      'Basic Package',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium!
-                                          .copyWith(color: Colors.black54),
-                                    ),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => SettingPage(),
-                                          ));
-                                    },
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color: goldenColor,
-                                        borderRadius: BorderRadius.circular(50),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 12.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Keshia carr',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleMedium!
+                                      .copyWith(color: Colors.black),
+                                ),
+                                SizedBox(
+                                  height: mq!.height * 0.01,
+                                ),
+                                Row(
+                                  children: [
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(right: 4.0),
+                                      child: Text(
+                                        'Basic Package',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyMedium!
+                                            .copyWith(color: Colors.black54),
                                       ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 6.0,
-                                            right: 6.0,
-                                            top: 2,
-                                            bottom: 2),
-                                        child: Text(
-                                          'Become Premium',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodySmall!
-                                              .copyWith(
-                                                  color: Colors.black87,
-                                                  fontSize: 9),
+                                    ),
+                                    InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: goldenColor,
+                                          borderRadius:
+                                              BorderRadius.circular(50),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 6.0,
+                                              right: 6.0,
+                                              top: 2,
+                                              bottom: 2),
+                                          child: Text(
+                                            'Become Premium',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodySmall!
+                                                .copyWith(
+                                                    color: Colors.black87,
+                                                    fontSize: 9),
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -166,10 +171,19 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                           .titleLarge!
                           .copyWith(color: Colors.black),
                     ),
-                    Text(
-                      'See all',
-                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                          color: Colors.black, fontWeight: FontWeight.normal),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const NotificationPage(),
+                            ));
+                      },
+                      child: Text(
+                        'See all',
+                        style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                            color: Colors.black, fontWeight: FontWeight.normal),
+                      ),
                     )
                   ],
                 ),
@@ -189,7 +203,13 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     ),
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const NotificationPage(),
+                      ));
+                },
                 title: Text(
                   'Has upgraded package : 3 days trial',
                   style: Theme.of(context)
@@ -224,7 +244,13 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     ),
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const NotificationPage(),
+                      ));
+                },
                 title: Text(
                   'Has expired package : 3 days trial',
                   style: Theme.of(context)
@@ -259,7 +285,13 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     ),
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const NotificationPage(),
+                      ));
+                },
                 title: Text(
                   'Has upgraded package : 3 days trial',
                   style: Theme.of(context)
@@ -427,7 +459,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => AllCoursesPage(),
+                                  builder: (context) => const AllCoursesPage(),
                                 ));
                           },
                           child: Card(

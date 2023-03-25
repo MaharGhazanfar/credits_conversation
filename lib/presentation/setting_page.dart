@@ -1,7 +1,10 @@
+import 'package:credit_and_conversation/presentation/account_setting_page.dart';
+import 'package:credit_and_conversation/presentation/password_change.dart';
 import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:flutter/material.dart';
 
 import 'login_screen.dart';
+import 'notification_page.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({Key? key}) : super(key: key);
@@ -43,6 +46,13 @@ class _SettingPageState extends State<SettingPage> {
                   size: mq!.width * 0.07,
                 ),
               ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AccountSettingPage(),
+                    ));
+              },
               title: Text(
                 'Account Setting',
                 style: Theme.of(context).textTheme.titleLarge,
@@ -61,6 +71,13 @@ class _SettingPageState extends State<SettingPage> {
                   size: mq!.width * 0.07,
                 ),
               ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const NotificationPage(),
+                    ));
+              },
               title: Text(
                 'Notification Setting',
                 style: Theme.of(context).textTheme.titleLarge,
@@ -79,6 +96,13 @@ class _SettingPageState extends State<SettingPage> {
                   size: mq!.width * 0.07,
                 ),
               ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ChangePassword(),
+                    ));
+              },
               title: Text(
                 'Password Setting',
                 style: Theme.of(context).textTheme.titleLarge,

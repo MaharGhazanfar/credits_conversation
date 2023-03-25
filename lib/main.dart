@@ -1,4 +1,5 @@
 import 'package:credit_and_conversation/presentation/login_screen.dart';
+import 'package:credit_and_conversation/presentation/sign_up_page.dart';
 import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -65,6 +66,11 @@ class MyApp extends StatelessWidget {
     );
     return MaterialApp(
       title: 'Credits and Conversation',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/SignUpPage': (context) => SignUpPage(),
+      },
+      initialRoute: '/',
       theme: baseTheme.copyWith(
           textTheme: GoogleFonts.robotoTextTheme(baseTheme.textTheme)),
       // ThemeData(
