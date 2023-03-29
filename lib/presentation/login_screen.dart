@@ -11,7 +11,7 @@ class LoginPage extends StatefulWidget {
   State<LoginPage> createState() => _LoginPageState();
 }
 
-Size? mq;
+late Size mq;
 
 class _LoginPageState extends State<LoginPage> {
   @override
@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 SizedBox(
-                  height: mq!.height * 0.07,
+                  height: mq.height * 0.07,
                 ),
                 const CustomTextField(
                   hintText: 'Enter your email here',
@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                   textInputType: TextInputType.visiblePassword,
                 ),
                 SizedBox(
-                  height: mq!.height * 0.01,
+                  height: mq.height * 0.01,
                 ),
                 const CustomTextField(
                   hintText: 'Password',
@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                      top: mq!.height * 0.02, bottom: mq!.height * 0.02),
+                      top: mq.height * 0.02, bottom: mq.height * 0.02),
                   child: Row(
                     children: [
                       const Text(
@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                      top: mq!.height * 0.03, bottom: mq!.height * 0.03),
+                      top: mq.height * 0.03, bottom: mq.height * 0.03),
                   child: const Text('or continue with'),
                 ),
                 Row(

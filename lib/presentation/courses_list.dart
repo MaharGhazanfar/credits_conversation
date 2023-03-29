@@ -34,8 +34,8 @@ class _AllCoursesPageState extends State<AllCoursesPage> {
       ),
       body: SafeArea(
         child: SizedBox(
-          width: mq!.width,
-          height: mq!.height,
+          width: mq.width,
+          height: mq.height,
           child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: Column(
@@ -67,7 +67,7 @@ class _AllCoursesPageState extends State<AllCoursesPage> {
                                 builder: (context) => const CourseDetail(),
                               ));
                         },
-                        child: ImageTitleCard(
+                        child: const ImageTitleCard(
                             title: 'Stock Trading', imagePath: 'assets/2.jpeg'),
                       );
                     },

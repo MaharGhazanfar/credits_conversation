@@ -48,7 +48,7 @@ class _CoursesPageState extends State<CoursesPage> {
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Text(

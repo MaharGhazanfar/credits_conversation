@@ -21,14 +21,14 @@ class _CourseDetailState extends State<CourseDetail> {
           fit: StackFit.passthrough,
           children: [
             SizedBox(
-                width: mq!.width,
-                height: mq!.height,
+                width: mq.width,
+                height: mq.height,
                 child: Column(
                   children: [
                     Expanded(
                         flex: 2,
-                        child: Container(
-                          width: mq!.width,
+                        child: SizedBox(
+                          width: mq.width,
                           //color: goldenColor,
                           child: Padding(
                             padding: const EdgeInsets.all(12.0),
@@ -150,7 +150,7 @@ class _CourseDetailState extends State<CourseDetail> {
                     Expanded(
                         flex: 3,
                         child: Container(
-                          width: mq!.width,
+                          width: mq.width,
                           color: Colors.white,
                           child: Column(
                             children: [
@@ -158,14 +158,14 @@ class _CourseDetailState extends State<CourseDetail> {
                                 padding: const EdgeInsets.only(
                                     top: 80.0, bottom: 10),
                                 child: CustomGoldenButton(
-                                  width: mq!.width * 0.8,
+                                  width: mq.width * 0.8,
                                   buttonTitle: 'ENROLL NOW',
                                   onPressed: () {},
                                 ),
                               ),
                               SizedBox(
-                                width: mq!.width,
-                                height: mq!.height * 0.361,
+                                width: mq.width,
+                                height: mq.height * 0.361,
                                 child: Card(
                                   elevation: 0,
                                   child: Padding(
@@ -209,9 +209,9 @@ class _CourseDetailState extends State<CourseDetail> {
                   ],
                 )),
             Positioned(
-              top: mq!.height * 0.28,
+              top: mq.height * 0.28,
               //bottom: mq!.height * 0.3,
-              left: mq!.width * 0.2,
+              left: mq.width * 0.2,
               //right: mq!.height * 0.1,
               child: Card(
                 child: Padding(
@@ -219,8 +219,8 @@ class _CourseDetailState extends State<CourseDetail> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10.0),
                     child: Image.asset(
-                      height: mq!.height * 0.2,
-                      width: mq!.width * 0.6,
+                      height: mq.height * 0.2,
+                      width: mq.width * 0.6,
                       'assets/2.jpeg',
                       fit: BoxFit.fill,
                     ),

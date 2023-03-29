@@ -27,7 +27,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
         automaticallyImplyLeading: false,
         actions: [
           SizedBox(
-            width: mq!.height * 0.085,
+            width: mq.height * 0.085,
             child: Card(
               elevation: 10,
               shape: const StadiumBorder(),
@@ -56,7 +56,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
 
             children: <Widget>[
               SizedBox(
-                height: mq!.height * 0.03,
+                height: mq.height * 0.03,
               ),
               InkWell(
                 onTap: () {
@@ -74,7 +74,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
                     child: SizedBox(
-                      width: mq!.width * 0.7,
+                      width: mq.width * 0.7,
                       child: Row(
                         children: [
                           Padding(
@@ -86,7 +86,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                                 backgroundColor: Colors.white,
                                 child: Icon(
                                   Icons.person,
-                                  size: mq!.width * 0.07,
+                                  size: mq.width * 0.07,
                                 ),
                               ),
                             ),
@@ -104,7 +104,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                                       .copyWith(color: Colors.black),
                                 ),
                                 SizedBox(
-                                  height: mq!.height * 0.01,
+                                  height: mq.height * 0.01,
                                 ),
                                 Row(
                                   children: [
@@ -157,7 +157,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                 ),
               ),
               SizedBox(
-                height: mq!.height * 0.03,
+                height: mq.height * 0.03,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
@@ -199,7 +199,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     backgroundColor: Colors.white,
                     child: Icon(
                       Icons.person,
-                      size: mq!.width * 0.07,
+                      size: mq.width * 0.07,
                     ),
                   ),
                 ),
@@ -240,7 +240,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     backgroundColor: Colors.white,
                     child: Icon(
                       Icons.person,
-                      size: mq!.width * 0.07,
+                      size: mq.width * 0.07,
                     ),
                   ),
                 ),
@@ -281,7 +281,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     backgroundColor: Colors.white,
                     child: Icon(
                       Icons.person,
-                      size: mq!.width * 0.07,
+                      size: mq.width * 0.07,
                     ),
                   ),
                 ),
@@ -372,8 +372,8 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
       body: SingleChildScrollView(
         child: SafeArea(
             child: SizedBox(
-          width: mq!.width,
-          height: mq!.height,
+          width: mq.width,
+          height: mq.height,
           child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: Column(
@@ -390,15 +390,15 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                   ),
                 ),
                 SizedBox(
-                  height: mq!.height * 0.15,
-                  width: mq!.width,
+                  height: mq.height * 0.15,
+                  width: mq.width,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: 5,
                     itemBuilder: (BuildContext context, int index) {
                       return SizedBox(
-                        height: mq!.height * 0.15,
-                        width: mq!.width * 0.8,
+                        height: mq.height * 0.15,
+                        width: mq.width * 0.8,
                         child: Card(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
@@ -433,7 +433,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                   ),
                 ),
                 SizedBox(
-                  height: mq!.height * 0.05,
+                  height: mq.height * 0.05,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(6.0),
@@ -446,14 +446,14 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                   ),
                 ),
                 SizedBox(
-                  height: mq!.height * 0.35,
-                  width: mq!.width,
+                  height: mq.height * 0.35,
+                  width: mq.width,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: 5,
                     itemBuilder: (BuildContext context, int index) {
                       return SizedBox(
-                        width: mq!.width * 0.7,
+                        width: mq.width * 0.7,
                         child: InkWell(
                           onTap: () {
                             Navigator.push(
@@ -474,7 +474,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                      padding: EdgeInsets.all(4.0),
+                                      padding: const EdgeInsets.all(4.0),
                                       child: Image.asset('assets/1.jpeg')),
                                   Expanded(
                                     child: Text(
@@ -504,7 +504,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                   ),
                 ),
                 SizedBox(
-                  height: mq!.height * 0.05,
+                  height: mq.height * 0.05,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(6.0),
@@ -517,15 +517,15 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                   ),
                 ),
                 SizedBox(
-                  height: mq!.height * 0.15,
-                  width: mq!.width,
+                  height: mq.height * 0.15,
+                  width: mq.width,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: 5,
                     itemBuilder: (BuildContext context, int index) {
                       return SizedBox(
-                        height: mq!.height * 0.15,
-                        width: mq!.width * 0.8,
+                        height: mq.height * 0.15,
+                        width: mq.width * 0.8,
                         child: Card(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
@@ -535,7 +535,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                             child: ListTile(
                               leading: CircleAvatar(
                                   backgroundColor: goldenColor,
-                                  child: Icon(
+                                  child: const Icon(
                                     CupertinoIcons.play_arrow_solid,
                                   )),
                               title: Text(

@@ -36,8 +36,8 @@ class _NotificationPageState extends State<NotificationPage> {
           child: Column(
             children: [
               SizedBox(
-                height: mq!.height * 0.25,
-                width: mq!.width,
+                height: mq.height * 0.25,
+                width: mq.width,
                 child: Card(
                   child: Padding(
                     padding: const EdgeInsets.all(
@@ -70,8 +70,8 @@ class _NotificationPageState extends State<NotificationPage> {
                           ),
                         ),
                         Container(
-                          width: mq!.width,
-                          height: mq!.height * 0.07,
+                          width: mq.width,
+                          height: mq.height * 0.07,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
@@ -92,8 +92,8 @@ class _NotificationPageState extends State<NotificationPage> {
                 ),
               ),
               SizedBox(
-                height: mq!.height * 0.25,
-                width: mq!.width,
+                height: mq.height * 0.25,
+                width: mq.width,
                 child: Card(
                   child: Padding(
                     padding: const EdgeInsets.all(
@@ -126,8 +126,8 @@ class _NotificationPageState extends State<NotificationPage> {
                           ),
                         ),
                         Container(
-                          width: mq!.width,
-                          height: mq!.height * 0.07,
+                          width: mq.width,
+                          height: mq.height * 0.07,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
@@ -148,8 +148,8 @@ class _NotificationPageState extends State<NotificationPage> {
                 ),
               ),
               SizedBox(
-                height: mq!.height * 0.25,
-                width: mq!.width,
+                height: mq.height * 0.25,
+                width: mq.width,
                 child: Card(
                   child: Padding(
                     padding: const EdgeInsets.all(
@@ -182,8 +182,8 @@ class _NotificationPageState extends State<NotificationPage> {
                           ),
                         ),
                         Container(
-                          width: mq!.width,
-                          height: mq!.height * 0.07,
+                          width: mq.width,
+                          height: mq.height * 0.07,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),

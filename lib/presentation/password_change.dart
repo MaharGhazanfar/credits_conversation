@@ -45,7 +45,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                 ),
               ),
               SizedBox(
-                height: mq!.height * 0.05,
+                height: mq.height * 0.05,
               ),
               const CustomTextField(
                 hintText: 'Old Password',
@@ -63,7 +63,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                 textInputType: TextInputType.emailAddress,
               ),
               SizedBox(
-                height: mq!.height * 0.05,
+                height: mq.height * 0.05,
               ),
               CustomGoldenButton(
                 buttonTitle: 'Change',
@@ -71,7 +71,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => MyProfilePage(),
+                        builder: (context) => const MyProfilePage(),
                       ));
                 },
               ),

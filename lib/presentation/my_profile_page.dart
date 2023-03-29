@@ -45,12 +45,12 @@ class _MyProfilePageState extends State<MyProfilePage> {
                   backgroundColor: Colors.white,
                   child: Icon(
                     Icons.person,
-                    size: mq!.width * 0.07,
+                    size: mq.width * 0.07,
                   ),
                 ),
               ),
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => AccountSettingPage(),
+                builder: (context) => const AccountSettingPage(),
               )),
               title: Text(
                 'Keshia carr',
@@ -73,7 +73,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SettingPage(),
+                            builder: (context) => const SettingPage(),
                           ));
                     },
                     child: Container(
@@ -102,7 +102,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                 child: Icon(
                   Icons.settings,
                   color: Colors.white,
-                  size: mq!.width * 0.06,
+                  size: mq.width * 0.06,
                 ),
               ),
             ),
@@ -149,7 +149,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     ),
                     Expanded(
                       child: CircularPercentIndicator(
-                        radius: mq!.height * 0.08,
+                        radius: mq.height * 0.08,
                         animateFromLastPercent: true,
                         arcBackgroundColor: Colors.black12,
                         rotateLinearGradient: false,
@@ -218,7 +218,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     ),
                     Expanded(
                       child: CircularPercentIndicator(
-                        radius: mq!.height * 0.08,
+                        radius: mq.height * 0.08,
                         animateFromLastPercent: true,
                         rotateLinearGradient: false,
                         arcBackgroundColor: Colors.black12,

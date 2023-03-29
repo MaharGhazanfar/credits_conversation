@@ -43,7 +43,7 @@ class _SettingPageState extends State<SettingPage> {
                 backgroundColor: goldenColor,
                 child: Icon(
                   Icons.person,
-                  size: mq!.width * 0.07,
+                  size: mq.width * 0.07,
                 ),
               ),
               onTap: () {
@@ -59,7 +59,7 @@ class _SettingPageState extends State<SettingPage> {
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
-                size: mq!.width * 0.07,
+                size: mq.width * 0.07,
                 color: Colors.white,
               ),
             ),
@@ -68,7 +68,7 @@ class _SettingPageState extends State<SettingPage> {
                 backgroundColor: goldenColor,
                 child: Icon(
                   Icons.notifications,
-                  size: mq!.width * 0.07,
+                  size: mq.width * 0.07,
                 ),
               ),
               onTap: () {
@@ -84,7 +84,7 @@ class _SettingPageState extends State<SettingPage> {
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
-                size: mq!.width * 0.07,
+                size: mq.width * 0.07,
                 color: Colors.white,
               ),
             ),
@@ -93,7 +93,7 @@ class _SettingPageState extends State<SettingPage> {
                 backgroundColor: goldenColor,
                 child: Icon(
                   Icons.lock,
-                  size: mq!.width * 0.07,
+                  size: mq.width * 0.07,
                 ),
               ),
               onTap: () {
@@ -109,7 +109,7 @@ class _SettingPageState extends State<SettingPage> {
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
-                size: mq!.width * 0.07,
+                size: mq.width * 0.07,
                 color: Colors.white,
               ),
             ),
@@ -124,7 +124,7 @@ class _SettingPageState extends State<SettingPage> {
                 backgroundColor: goldenColor,
                 child: Icon(
                   Icons.person_outline,
-                  size: mq!.width * 0.07,
+                  size: mq.width * 0.07,
                 ),
               ),
               title: Text(
@@ -133,7 +133,7 @@ class _SettingPageState extends State<SettingPage> {
               ),
               trailing: Icon(
                 Icons.delete_outline,
-                size: mq!.width * 0.07,
+                size: mq.width * 0.07,
                 color: goldenColor,
               ),
             )

@@ -39,16 +39,16 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
         child: Column(
           children: [
             CircleAvatar(
-              radius: mq!.width * 0.16,
+              radius: mq.width * 0.16,
               backgroundColor: Colors.white,
               child: Icon(
                 Icons.person,
                 color: goldenColor,
-                size: mq!.width * 0.18,
+                size: mq.width * 0.18,
               ),
             ),
             SizedBox(
-              height: mq!.height * 0.04,
+              height: mq.height * 0.04,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,21 +57,21 @@ class _AccountSettingPageState extends State<AccountSettingPage> {
                   fieldTitle: 'First Name',
                   fieldValue: 'Keshia',
                   icon: Icons.person,
-                  textWidth: mq!.width * 0.28,
-                  width: mq!.width * 0.4,
+                  textWidth: mq.width * 0.28,
+                  width: mq.width * 0.4,
                 ),
                 CustomProfileField(
                   fieldTitle: 'Last Name',
                   fieldValue: 'Carr',
                   icon: Icons.person,
-                  textWidth: mq!.width * 0.28,
-                  width: mq!.width * 0.4,
+                  textWidth: mq.width * 0.28,
+                  width: mq.width * 0.4,
                 )
               ],
             ),
             CustomProfileField(
               fieldTitle: 'Email',
-              textWidth: mq!.width * 0.77,
+              textWidth: mq.width * 0.77,
               fieldValue: 'mahargsdkj@gmail.com',
               icon: Icons.mail,
             ),

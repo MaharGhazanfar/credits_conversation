@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:flutter/material.dart';
 
@@ -150,8 +152,8 @@ class CustomProfileField extends StatelessWidget {
 class ImageTitleCard extends StatelessWidget {
   final String title;
   final String imagePath;
-
-  ImageTitleCard({required this.title, required this.imagePath});
+  // ignore: use_key_in_widget_constructors
+  const ImageTitleCard({required this.title, required this.imagePath});
 
   @override
   Widget build(BuildContext context) {
@@ -180,7 +182,7 @@ class ImageTitleCard extends StatelessWidget {
             left: 0.0,
             right: 0.0,
             child: Container(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
@@ -193,7 +195,7 @@ class ImageTitleCard extends StatelessWidget {
               ),
               child: Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
