@@ -1,4 +1,6 @@
-import 'package:badges/badges.dart';
+import 'dart:developer';
+
+import 'package:badges/badges.dart' as badges;
 import 'package:credit_and_conversation/custom_widgets/customTextField.dart';
 import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +32,7 @@ class _SignUpPageState extends State<SignUpPage> {
         firstDate: DateTime(2015, 8),
         lastDate: DateTime(2101));
     if (picked != null) {
-      print(DateFormat("yyyy-MM-dd").format(picked));
+      log(DateFormat("yyyy-MM-dd").format(picked));
     }
   }
 
@@ -43,22 +45,22 @@ class _SignUpPageState extends State<SignUpPage> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                Badge(
+                badges.Badge(
                   badgeContent: Icon(
                     Icons.camera_alt,
-                    size: mq!.width * 0.05,
+                    size: mq.width * 0.05,
                   ),
-                  position: BadgePosition.bottomEnd(bottom: 5, end: 10),
+                  position: badges.BadgePosition.bottomEnd(bottom: 5, end: 10),
                   showBadge: true,
                   stackFit: StackFit.passthrough,
                   onTap: () {},
                   child: CircleAvatar(
-                    radius: mq!.width * 0.18,
+                    radius: mq.width * 0.18,
                     backgroundColor: Colors.white,
                     child: Icon(
                       Icons.person,
                       color: goldenColor,
-                      size: mq!.width * 0.18,
+                      size: mq.width * 0.18,
                     ),
                   ),
                 ),
@@ -169,7 +171,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         //fontWeight: FontWeight.bold,
                         color: Colors.black54),
                     onCountryChanged: (country) {
-                      print('Country changed to: ${country.name}');
+                      log('Country changed to: ${country.name}');
                     },
                     autovalidateMode: AutovalidateMode.disabled,
                     dropdownTextStyle:

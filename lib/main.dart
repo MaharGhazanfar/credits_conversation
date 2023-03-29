@@ -67,8 +67,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Credits and Conversation',
       routes: {
-        '/': (context) => LoginPage(),
-        '/SignUpPage': (context) => SignUpPage(),
+        '/': (context) => const LoginPage(),
+        '/SignUpPage': (context) => const SignUpPage(),
       },
       initialRoute: '/',
       theme: baseTheme.copyWith(
