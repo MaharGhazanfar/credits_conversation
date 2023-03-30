@@ -66,7 +66,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Credits and Conversation',
       routes: {
-        '/': (context) => const LoginPage(),
+        '/': (context) => const SplashScreen(),
+        '/SignInPage': (context) => const LoginPage(),
         '/SignUpPage': (context) => const SignUpPage(),
       },
       initialRoute: '/',

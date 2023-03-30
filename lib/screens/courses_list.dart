@@ -3,14 +3,9 @@ import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class AllCoursesPage extends StatefulWidget {
+class AllCoursesPage extends StatelessWidget {
   const AllCoursesPage({Key? key}) : super(key: key);
 
-  @override
-  State<AllCoursesPage> createState() => _AllCoursesPageState();
-}
-
-class _AllCoursesPageState extends State<AllCoursesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

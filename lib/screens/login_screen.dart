@@ -8,7 +8,6 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    mq = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
@@ -140,5 +139,3 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
-late Size mq;
