@@ -25,17 +25,13 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  height: 100,
-                  width: 150,
-                  color: goldenColor,
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Logo',
-                    style: Theme.of(context).textTheme.headlineLarge,
-                  ),
-                ),
+                    margin: EdgeInsets.only(top: mq.height * 0.05),
+                    height: mq.height * 0.25,
+                    width: mq.width * 0.8,
+                    alignment: Alignment.center,
+                    child: Image.asset('assets/1.jpeg')),
                 SizedBox(
-                  height: mq.height * 0.07,
+                  height: mq.height * 0.03,
                 ),
                 const CustomTextField(
                   hintText: 'Enter your email here',
