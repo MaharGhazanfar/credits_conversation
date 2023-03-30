@@ -4,15 +4,11 @@ import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DiscoveryPage extends StatefulWidget {
+class DiscoveryPage extends StatelessWidget {
   const DiscoveryPage({Key? key}) : super(key: key);
 
-  @override
-  State<DiscoveryPage> createState() => _DiscoveryPageState();
-}
-
-class _DiscoveryPageState extends State<DiscoveryPage> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  static final GlobalKey<ScaffoldState> _scaffoldKey =
+      GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {

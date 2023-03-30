@@ -1,17 +1,10 @@
-
-
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class ChangePassword extends StatefulWidget {
+class ChangePassword extends StatelessWidget {
   const ChangePassword({Key? key}) : super(key: key);
 
-  @override
-  State<ChangePassword> createState() => _ChangePasswordState();
-}
-
-class _ChangePasswordState extends State<ChangePassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

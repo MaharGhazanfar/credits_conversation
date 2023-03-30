@@ -1,16 +1,10 @@
-
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:flutter/material.dart';
 
-class NotificationPage extends StatefulWidget {
+class NotificationPage extends StatelessWidget {
   const NotificationPage({Key? key}) : super(key: key);
 
-  @override
-  State<NotificationPage> createState() => _NotificationPageState();
-}
-
-class _NotificationPageState extends State<NotificationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

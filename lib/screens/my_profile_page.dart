@@ -1,18 +1,11 @@
-
-
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-class MyProfilePage extends StatefulWidget {
+class MyProfilePage extends StatelessWidget {
   const MyProfilePage({Key? key}) : super(key: key);
 
-  @override
-  State<MyProfilePage> createState() => _MyProfilePageState();
-}
-
-class _MyProfilePageState extends State<MyProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

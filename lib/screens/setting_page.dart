@@ -2,14 +2,9 @@ import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:flutter/material.dart';
 
-class SettingPage extends StatefulWidget {
+class SettingPage extends StatelessWidget {
   const SettingPage({Key? key}) : super(key: key);
 
-  @override
-  State<SettingPage> createState() => _SettingPageState();
-}
-
-class _SettingPageState extends State<SettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

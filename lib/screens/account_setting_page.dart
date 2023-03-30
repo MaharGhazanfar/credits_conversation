@@ -4,14 +4,9 @@ import 'package:flutter/material.dart';
 import '../utils/contants.dart';
 import 'login_screen.dart';
 
-class AccountSettingPage extends StatefulWidget {
+class AccountSettingPage extends StatelessWidget {
   const AccountSettingPage({Key? key}) : super(key: key);
 
-  @override
-  State<AccountSettingPage> createState() => _AccountSettingPageState();
-}
-
-class _AccountSettingPageState extends State<AccountSettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
