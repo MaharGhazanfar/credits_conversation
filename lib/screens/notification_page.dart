@@ -1,7 +1,7 @@
+
+import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:flutter/material.dart';
-
-import 'login_screen.dart';
 
 class NotificationPage extends StatefulWidget {
   const NotificationPage({Key? key}) : super(key: key);

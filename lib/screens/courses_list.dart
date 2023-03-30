@@ -1,9 +1,7 @@
-import 'package:credit_and_conversation/custom_widgets/customTextField.dart';
-import 'package:credit_and_conversation/presentation/course_details.dart';
-import 'package:credit_and_conversation/utils/contants.dart';
+import 'package:credit_and_conversation/screens/screens.dart';
+import 'package:credit_and_conversation/utils/utils.dart';
+import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-
-import 'login_screen.dart';
 
 class AllCoursesPage extends StatefulWidget {
   const AllCoursesPage({Key? key}) : super(key: key);

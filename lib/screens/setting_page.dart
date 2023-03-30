@@ -1,10 +1,6 @@
-import 'package:credit_and_conversation/presentation/account_setting_page.dart';
-import 'package:credit_and_conversation/presentation/password_change.dart';
-import 'package:credit_and_conversation/utils/contants.dart';
+import 'package:credit_and_conversation/screens/screens.dart';
+import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:flutter/material.dart';
-
-import 'login_screen.dart';
-import 'notification_page.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({Key? key}) : super(key: key);

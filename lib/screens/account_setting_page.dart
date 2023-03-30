@@ -1,4 +1,4 @@
-import 'package:credit_and_conversation/custom_widgets/customTextField.dart';
+import 'package:credit_and_conversation/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/contants.dart';

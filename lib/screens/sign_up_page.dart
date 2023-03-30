@@ -1,15 +1,12 @@
 import 'dart:developer';
-
 import 'package:badges/badges.dart' as badges;
-import 'package:credit_and_conversation/custom_widgets/customTextField.dart';
-import 'package:credit_and_conversation/utils/contants.dart';
+import 'package:credit_and_conversation/screens/screens.dart';
+import 'package:credit_and_conversation/utils/utils.dart';
+import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl_phone_field/country_picker_dialog.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-
-import 'discovery_page.dart';
-import 'login_screen.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);

@@ -1,10 +1,9 @@
-import 'package:credit_and_conversation/presentation/setting_page.dart';
-import 'package:credit_and_conversation/utils/contants.dart';
+
+
+import 'package:credit_and_conversation/screens/screens.dart';
+import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-
-import 'account_setting_page.dart';
-import 'login_screen.dart';
 
 class MyProfilePage extends StatefulWidget {
   const MyProfilePage({Key? key}) : super(key: key);

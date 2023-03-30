@@ -1,12 +1,8 @@
-import 'package:credit_and_conversation/custom_widgets/customTextField.dart';
-import 'package:credit_and_conversation/presentation/courses_list.dart';
-import 'package:credit_and_conversation/presentation/notification_page.dart';
-import 'package:credit_and_conversation/presentation/setting_page.dart';
-import 'package:credit_and_conversation/utils/contants.dart';
+import 'package:credit_and_conversation/screens/screens.dart';
+import 'package:credit_and_conversation/utils/utils.dart';
+import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'login_screen.dart';
 
 class DiscoveryPage extends StatefulWidget {
   const DiscoveryPage({Key? key}) : super(key: key);

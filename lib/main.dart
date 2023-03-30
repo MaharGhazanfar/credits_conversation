@@ -1,6 +1,5 @@
-import 'package:credit_and_conversation/presentation/login_screen.dart';
-import 'package:credit_and_conversation/presentation/sign_up_page.dart';
-import 'package:credit_and_conversation/utils/contants.dart';
+import 'package:credit_and_conversation/screens/screens.dart';
+import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

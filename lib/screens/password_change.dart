@@ -1,8 +1,8 @@
-import 'package:credit_and_conversation/presentation/my_profile_page.dart';
-import 'package:flutter/material.dart';
 
-import '../custom_widgets/customTextField.dart';
-import 'login_screen.dart';
+
+import 'package:credit_and_conversation/screens/screens.dart';
+import 'package:credit_and_conversation/widgets/widgets.dart';
+import 'package:flutter/material.dart';
 
 class ChangePassword extends StatefulWidget {
   const ChangePassword({Key? key}) : super(key: key);
