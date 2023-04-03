@@ -1,5 +1,4 @@
 import 'package:credit_and_conversation/screens/screens.dart';
-import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 

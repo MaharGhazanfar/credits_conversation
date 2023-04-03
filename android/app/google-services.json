@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "550721124395",
+    "project_id": "credit-conversation",
+    "storage_bucket": "credit-conversation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550721124395:android:404cb7802fd999ec7b126e",
+        "android_client_info": {
+          "package_name": "creditandconversation.com.credit_and_conversation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550721124395-uh9471ec6c0vgcm0754tdcogvdbh3jbe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUONACVLX7ahvyiJ1LgaR9v8nNuyucwF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550721124395-uh9471ec6c0vgcm0754tdcogvdbh3jbe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
