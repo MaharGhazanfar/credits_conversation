@@ -4,6 +4,7 @@ export 'course_details.dart';
 export 'courses.dart';
 export 'courses_list.dart';
 export 'discovery_page.dart';
+export 'forget_password_page.dart';
 export 'login_screen.dart';
 export 'my_profile_page.dart';
 export 'notification_page.dart';

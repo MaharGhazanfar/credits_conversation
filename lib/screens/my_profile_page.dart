@@ -42,7 +42,7 @@ class MyProfilePage extends StatelessWidget {
                 ),
               ),
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const AccountSettingPage(),
+                builder: (context) => AccountSettingPage(),
               )),
               title: Text(
                 'Keshia carr',
@@ -65,7 +65,7 @@ class MyProfilePage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const SettingPage(),
+                            builder: (context) => SettingPage(),
                           ));
                     },
                     child: Container(

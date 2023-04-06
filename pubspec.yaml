@@ -42,10 +42,19 @@ dependencies:
   intl_phone_field:
   percent_indicator:
   url_launcher:
-  flutter_launcher_icons: ^0.12.0
-  flutter_native_splash: ^2.2.19
-  page_transition: ^2.0.9
+  flutter_launcher_icons:
+  flutter_native_splash:
+  page_transition:
   firebase_core: ^2.9.0
+  fluttertoast:
+  cloud_firestore:
+  firebase_storage:
+  firebase_auth:
+  image_picker:
+  shared_preferences:
+  permission_handler:
+  provider:
+  internet_connection_checker:
 
 dev_dependencies:
   flutter_test:

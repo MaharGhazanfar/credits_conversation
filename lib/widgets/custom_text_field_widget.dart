@@ -41,12 +41,14 @@ class CustomTextField extends StatelessWidget {
         onChanged: onChanged,
         validator: validator,
         obscureText: obscureText,
-        style: const TextStyle(color: Colors.black),
+        style: Theme.of(context)
+            .textTheme
+            .titleSmall!
+            .copyWith(color: Colors.black),
         decoration: InputDecoration(
-            constraints: const BoxConstraints(maxHeight: 60),
             filled: true,
             fillColor: Colors.white,
-            suffix: suffix,
+            suffixIcon: suffix,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -57,7 +59,10 @@ class CustomTextField extends StatelessWidget {
             errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            prefixIcon: Icon(prefixIcon),
+            prefixIcon: Icon(
+              prefixIcon,
+              color: Theme.of(context).iconTheme.color,
+            ),
             hintText: hintText),
       ),
     );
