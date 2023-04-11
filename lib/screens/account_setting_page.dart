@@ -100,7 +100,7 @@ class AccountSettingPage extends StatelessWidget {
                     ),
                     CustomProfileField(
                       fieldTitle: 'Phone Number',
-                      fieldValue: '${doc![ModelSignUpPage.PHONENUMBER]}',
+                      fieldValue: '${doc[ModelSignUpPage.PHONENUMBER]}',
                       icon: Icons.phone,
                     )
                   ],

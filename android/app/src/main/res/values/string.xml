@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">credits and conversation</string>
+    <string name="facebook_app_id">596735939175718</string>
+    <string name="fb_login_protocol_scheme">fb596735939175718</string>
+    <string name="facebook_client_token">65bda95eb67cf4bee5fae3879bcadf7f</string>
+
+
+</resources>

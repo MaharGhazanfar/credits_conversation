@@ -55,6 +55,7 @@ dependencies:
   permission_handler:
   provider:
   internet_connection_checker:
+  flutter_facebook_auth:
 
 dev_dependencies:
   flutter_test:

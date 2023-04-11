@@ -1,10 +1,12 @@
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../authentication/authentication_service.dart';
+import '../authentication/dbHandler.dart';
 import '../model_classes/model_signup_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -195,7 +197,53 @@ class _LoginPageState extends State<LoginPage> {
                               style: ElevatedButton.styleFrom(
                                   shape: const CircleBorder(),
                                   backgroundColor: Colors.white),
-                              onPressed: () {},
+                              onPressed: () async {
+                                UserCredential user =
+                                    await AuthenticationService
+                                        .signInWithFacebook();
+
+                                modelSignUpPage.isLoading = true;
+                                modelSignUpPage.opacity = 0.5;
+
+                                var createdUser = ModelSignUpPage(
+                                    firstName: user.additionalUserInfo!
+                                        .profile!['first_name'],
+                                    lastName: user.additionalUserInfo!
+                                        .profile!['last_name'],
+                                    emailAddress: user
+                                        .additionalUserInfo!.profile!['email'],
+                                    password: "Can't be accessed",
+                                    phoneNumber: user.user!.phoneNumber,
+                                    dateOfBirth: user.additionalUserInfo!
+                                        .profile!['birthday'],
+                                    imagePath: user.additionalUserInfo!
+                                        .profile!['picture']['data']['url'],
+                                    gender: 'Not provided');
+
+                                await DBHandler.userCollection()
+                                    .doc('${DBHandler.userUid}')
+                                    .set(createdUser.toMap());
+
+                                modelSignUpPage.isLoading = false;
+                                modelSignUpPage.opacity = 1.0;
+
+                                if (user.credential!.providerId ==
+                                    'facebook.com') {
+                                  Navigator.of(context).pushAndRemoveUntil(
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              DiscoveryPage()),
+                                      (Route<dynamic> route) => false);
+                                } else {
+                                  AuthenticationService.ShowCustomToast(
+                                      msg: 'Something went wrong');
+                                }
+
+                                print(
+                                    '${user.additionalUserInfo!.profile}///////////');
+                                print(
+                                    '${user.additionalUserInfo!.profile!['picture']['data']['url']}///////////');
+                              },
                               child: Padding(
                                 padding: const EdgeInsets.all(4.0),
                                 child: Icon(
@@ -242,109 +290,4 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
-
-  // void resetDialogue() {
-  //   TextEditingController _emailController = TextEditingController();
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) => AlertDialog(
-  //       backgroundColor: Colors.black54,
-  //       title: Text('Reset Password'),
-  //       content: Stack(
-  //         children: [
-  //           Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-  //             Text('Enter your email address to receive link to reset password',
-  //                 style: Theme.of(context).textTheme.titleMedium!),
-  //             SizedBox(height: mq.height * 0.05),
-  //             TextFormField(
-  //               controller: _emailController,
-  //               textAlignVertical: TextAlignVertical.center,
-  //               decoration: InputDecoration(
-  //                   contentPadding:
-  //                       EdgeInsets.symmetric(vertical: mq.height * 0.01),
-  //                   border: OutlineInputBorder(
-  //                     borderRadius: BorderRadius.circular(5),
-  //                     borderSide: BorderSide(color: Colors.grey.shade400),
-  //                   ),
-  //                   enabledBorder: OutlineInputBorder(
-  //                     borderRadius: BorderRadius.circular(5),
-  //                     borderSide: BorderSide(color: Colors.grey.shade400),
-  //                   ),
-  //                   focusedBorder: OutlineInputBorder(
-  //                     borderRadius: BorderRadius.circular(5),
-  //                     borderSide: BorderSide(color: Colors.grey.shade400),
-  //                   ),
-  //                   errorBorder: OutlineInputBorder(
-  //                     borderRadius: BorderRadius.circular(5),
-  //                     borderSide: BorderSide(color: Colors.grey.shade400),
-  //                   ),
-  //                   constraints: BoxConstraints(maxHeight: mq.height * 0.07),
-  //                   hintText: 'Email address',
-  //                   hintStyle: Theme.of(context).textTheme.titleSmall!,
-  //                   prefixIcon: Icon(
-  //                     Icons.email_outlined,
-  //                     color: Theme.of(context).iconTheme.color,
-  //                   )),
-  //             ),
-  //             SizedBox(height: mq.height * 0.03),
-  //           ]),
-  //           Consumer<ModelSignUpPage>(
-  //               builder: (context, value, child) => value.isLoading
-  //                   ? ShowProgressIndicator(
-  //                       opacity: value.opacity,
-  //                     )
-  //                   : SizedBox()),
-  //         ],
-  //       ),
-  //       actions: [
-  //         CustomGoldenButton(
-  //           onPressed: () => Navigator.of(context).pop(),
-  //           buttonTitle: 'Cancel',
-  //         ),
-  //         CustomGoldenButton(
-  //           buttonTitle: 'Reset',
-  //           onPressed: () async {
-  //             if (await InternetConnectionChecker().hasConnection) {
-  //               if (_emailController.text.isNotEmpty) {
-  //                 if (_emailController.text.contains('@') &&
-  //                     _emailController.text.contains('.com')) {
-  //                   modelSignUpPage.isLoading = true;
-  //                   modelSignUpPage.opacity = 0.5;
-  //                   final status = await AuthenticationService.resetPWD(
-  //                       email: _emailController.text);
-  //                   modelSignUpPage.isLoading = !modelSignUpPage.isLoading;
-  //                   modelSignUpPage.opacity = 1.0;
-  //                   Fluttertoast.showToast(
-  //                       msg: status,
-  //                       backgroundColor:
-  //                           status == 'password reset link sent successfully'
-  //                               ? Colors.green
-  //                               : Colors.red);
-  //                   if (status == 'password reset link sent successfully') {
-  //                     Navigator.pop(context);
-  //                     // Navigator.pushAndRemoveUntil(
-  //                     //     context,
-  //                     //     PageTransition(
-  //                     //         type:
-  //                     //             PageTransitionType.rightToLeft,
-  //                     //         child: LoginPage()),
-  //                     //     (route) => false);
-  //                   }
-  //                 } else {
-  //                   AuthenticationService.ShowCustomToast(
-  //                       msg: 'Invalid email provided');
-  //                 }
-  //               } else {
-  //                 AuthenticationService.ShowCustomToast(msg: 'Email is empty');
-  //               }
-  //             } else {
-  //               AuthenticationService.ShowCustomToast(
-  //                   msg: 'No internet connection');
-  //             }
-  //           },
-  //         )
-  //       ],
-  //     ),
-  //   );
-  // }
 }
