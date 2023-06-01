@@ -76,60 +76,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       theme: baseTheme.copyWith(
           textTheme: GoogleFonts.robotoTextTheme(baseTheme.textTheme)),
-      // ThemeData(
-      //   primaryColor: Colors.white,
-      //   //appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
-      //   scaffoldBackgroundColor: Colors.black87,
-      //   textTheme: const TextTheme(
-      //     bodySmall: TextStyle(
-      //       color: Colors.white,
-      //       fontSize: 14,
-      //     ),
-      //     bodyMedium: TextStyle(
-      //       color: Colors.white,
-      //       fontSize: 16,
-      //     ),
-      //     bodyLarge: TextStyle(
-      //       color: Colors.white,
-      //       fontSize: 18,
-      //     ),
-      //     headlineSmall: TextStyle(
-      //       color: Colors.white,
-      //       fontWeight: FontWeight.bold,
-      //       fontSize: 22,
-      //     ),
-      //     headlineMedium: TextStyle(
-      //       color: Colors.white,
-      //       fontWeight: FontWeight.bold,
-      //       fontSize: 24,
-      //     ),
-      //     headlineLarge: TextStyle(
-      //       color: Colors.white,
-      //       fontWeight: FontWeight.bold,
-      //       fontSize: 24,
-      //     ),
-      //     titleSmall: TextStyle(
-      //       color: Colors.white,
-      //       fontSize: 16,
-      //     ),
-      //     titleMedium: TextStyle(
-      //       color: Colors.white,
-      //       fontSize: 18,
-      //     ),
-      //     titleLarge: TextStyle(
-      //       color: Colors.white,
-      //       fontSize: 20,
-      //     ),
-      //   ),
-      //   iconTheme: IconThemeData(color: goldenColor, size: 35),
-      //   elevatedButtonTheme: ElevatedButtonThemeData(
-      //     style: ElevatedButton.styleFrom(
-      //       backgroundColor: goldenColor,
-      //       textStyle: const TextStyle(
-      //           color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
-      //     ),
-      //   ),
-      // ),
       debugShowCheckedModeBanner: false,
     );
   }
