@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
@@ -239,10 +241,8 @@ class _LoginPageState extends State<LoginPage> {
                                       msg: 'Something went wrong');
                                 }
 
-                                print(
-                                    '${user.additionalUserInfo!.profile}///////////');
-                                print(
-                                    '${user.additionalUserInfo!.profile!['picture']['data']['url']}///////////');
+                                log('${user.additionalUserInfo!.profile}///////////');
+                                log('${user.additionalUserInfo!.profile!['picture']['data']['url']}///////////');
                               },
                               child: Padding(
                                 padding: const EdgeInsets.all(4.0),

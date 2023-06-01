@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:credit_and_conversation/authentication/dbHandler.dart';
+import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -101,13 +102,13 @@ class AuthenticationService {
     return image;
   }
 
-  static ShowCustomToast({required String msg}) {
+  static ShowCustomToast({required String msg, double? fontSize = 16}) {
     Fluttertoast.showToast(
         msg: msg,
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.BOTTOM,
-        backgroundColor: Colors.green,
-        textColor: Colors.black54,
-        fontSize: 16.0);
+        backgroundColor: goldenColor,
+        textColor: Colors.white,
+        fontSize: fontSize);
   }
 }

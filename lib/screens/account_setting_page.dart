@@ -63,14 +63,14 @@ class AccountSettingPage extends StatelessWidget {
                       children: [
                         CustomProfileField(
                           fieldTitle: 'First Name',
-                          fieldValue: '${doc![ModelSignUpPage.FIRSTNAME]}',
+                          fieldValue: '${doc[ModelSignUpPage.FIRSTNAME]}',
                           icon: Icons.person,
                           textWidth: mq.width * 0.28,
                           width: mq.width * 0.4,
                         ),
                         CustomProfileField(
                           fieldTitle: 'Last Name',
-                          fieldValue: '${doc![ModelSignUpPage.LASTNAME]}',
+                          fieldValue: '${doc[ModelSignUpPage.LASTNAME]}',
                           icon: Icons.person,
                           textWidth: mq.width * 0.28,
                           width: mq.width * 0.4,
@@ -80,22 +80,22 @@ class AccountSettingPage extends StatelessWidget {
                     CustomProfileField(
                       fieldTitle: 'Email',
                       textWidth: mq.width * 0.77,
-                      fieldValue: '${doc![ModelSignUpPage.EMAILADDRESS]}',
+                      fieldValue: '${doc[ModelSignUpPage.EMAILADDRESS]}',
                       icon: Icons.mail,
                     ),
                     CustomProfileField(
                       fieldTitle: 'Password',
-                      fieldValue: '${doc![ModelSignUpPage.PASSWORD]}',
+                      fieldValue: '${doc[ModelSignUpPage.PASSWORD]}',
                       icon: Icons.lock,
                     ),
                     CustomProfileField(
                       fieldTitle: 'Birth Date',
-                      fieldValue: '${doc![ModelSignUpPage.DATEOFBIRTH]}',
+                      fieldValue: '${doc[ModelSignUpPage.DATEOFBIRTH]}',
                       icon: Icons.calendar_month,
                     ),
                     CustomProfileField(
                       fieldTitle: 'Gender',
-                      fieldValue: '${doc![ModelSignUpPage.GENDER]}',
+                      fieldValue: '${doc[ModelSignUpPage.GENDER]}',
                       icon: Icons.person,
                     ),
                     CustomProfileField(
