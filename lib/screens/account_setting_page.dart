@@ -1,11 +1,16 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
+import 'package:credit_and_conversation/utils/contants.dart';
 import 'package:credit_and_conversation/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/contants.dart';
+import '../authentication/dbHandler.dart';
+import '../model_classes/model_signup_page.dart';
 
 class AccountSettingPage extends StatelessWidget {
-  const AccountSettingPage({Key? key}) : super(key: key);
+  const AccountSettingPage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,67 +36,82 @@ class AccountSettingPage extends StatelessWidget {
           child: SafeArea(
               child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            CircleAvatar(
-              radius: mq.width * 0.16,
-              backgroundColor: Colors.white,
-              child: Icon(
-                Icons.person,
-                color: goldenColor,
-                size: mq.width * 0.18,
-              ),
-            ),
-            SizedBox(
-              height: mq.height * 0.04,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomProfileField(
-                  fieldTitle: 'First Name',
-                  fieldValue: 'Keshia',
-                  icon: Icons.person,
-                  textWidth: mq.width * 0.28,
-                  width: mq.width * 0.4,
-                ),
-                CustomProfileField(
-                  fieldTitle: 'Last Name',
-                  fieldValue: 'Carr',
-                  icon: Icons.person,
-                  textWidth: mq.width * 0.28,
-                  width: mq.width * 0.4,
-                )
-              ],
-            ),
-            CustomProfileField(
-              fieldTitle: 'Email',
-              textWidth: mq.width * 0.77,
-              fieldValue: 'mahargsdkj@gmail.com',
-              icon: Icons.mail,
-            ),
-            const CustomProfileField(
-              fieldTitle: 'Password',
-              fieldValue: '********',
-              icon: Icons.lock,
-            ),
-            const CustomProfileField(
-              fieldTitle: 'Birth Date',
-              fieldValue: '2023-02-15',
-              icon: Icons.calendar_month,
-            ),
-            const CustomProfileField(
-              fieldTitle: 'Gender',
-              fieldValue: 'Male',
-              icon: Icons.person,
-            ),
-            const CustomProfileField(
-              fieldTitle: 'Phone Number',
-              fieldValue: '+923324645721',
-              icon: Icons.phone,
-            )
-          ],
-        ),
+        child: StreamBuilder<DocumentSnapshot>(
+            stream:
+                DBHandler.userCollection().doc(DBHandler.userUid).snapshots(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                var doc = snapshot.data!.data() as Map<String, dynamic>?;
+                return Column(
+                  children: [
+                    CircleAvatar(
+                      radius: mq.width * 0.16,
+                      backgroundColor: Colors.white,
+                      backgroundImage:
+                          NetworkImage(doc![ModelSignUpPage.IMAGEPATH]),
+                      // child: Icon(
+                      //   Icons.person,
+                      //   color: goldenColor,
+                      //   size: mq.width * 0.18,
+                      // ),
+                    ),
+                    SizedBox(
+                      height: mq.height * 0.04,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CustomProfileField(
+                          fieldTitle: 'First Name',
+                          fieldValue: '${doc![ModelSignUpPage.FIRSTNAME]}',
+                          icon: Icons.person,
+                          textWidth: mq.width * 0.28,
+                          width: mq.width * 0.4,
+                        ),
+                        CustomProfileField(
+                          fieldTitle: 'Last Name',
+                          fieldValue: '${doc![ModelSignUpPage.LASTNAME]}',
+                          icon: Icons.person,
+                          textWidth: mq.width * 0.28,
+                          width: mq.width * 0.4,
+                        )
+                      ],
+                    ),
+                    CustomProfileField(
+                      fieldTitle: 'Email',
+                      textWidth: mq.width * 0.77,
+                      fieldValue: '${doc![ModelSignUpPage.EMAILADDRESS]}',
+                      icon: Icons.mail,
+                    ),
+                    CustomProfileField(
+                      fieldTitle: 'Password',
+                      fieldValue: '${doc![ModelSignUpPage.PASSWORD]}',
+                      icon: Icons.lock,
+                    ),
+                    CustomProfileField(
+                      fieldTitle: 'Birth Date',
+                      fieldValue: '${doc![ModelSignUpPage.DATEOFBIRTH]}',
+                      icon: Icons.calendar_month,
+                    ),
+                    CustomProfileField(
+                      fieldTitle: 'Gender',
+                      fieldValue: '${doc![ModelSignUpPage.GENDER]}',
+                      icon: Icons.person,
+                    ),
+                    CustomProfileField(
+                      fieldTitle: 'Phone Number',
+                      fieldValue: '${doc[ModelSignUpPage.PHONENUMBER]}',
+                      icon: Icons.phone,
+                    )
+                  ],
+                );
+              } else {
+                return Center(
+                    child: CircularProgressIndicator(
+                  color: goldenColor,
+                ));
+              }
+            }),
       ))),
     );
   }

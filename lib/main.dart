@@ -1,8 +1,11 @@
+import 'package:credit_and_conversation/model_classes/model_signup_page.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
+
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -31,7 +34,7 @@ class MyApp extends StatelessWidget {
         ),
         bodyLarge: TextStyle(
           color: Colors.white,
-          fontSize: 18,
+          fontSize: 16,
         ),
         headlineSmall: TextStyle(
           color: Colors.white,
