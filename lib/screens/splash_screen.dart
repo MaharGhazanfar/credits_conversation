@@ -1,3 +1,4 @@
+import 'package:credit_and_conversation/constants/app_images.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return SizedBox(
       width: mq.width,
       height: mq.height,
-      child: Image.asset('assets/splash_image.png'),
+      child: Image.asset(AppImages.splashImg),
     );
   }
 }

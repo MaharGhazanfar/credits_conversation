@@ -1,3 +1,4 @@
+import 'package:credit_and_conversation/constants/app_images.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
@@ -60,8 +61,10 @@ class AllCoursesPage extends StatelessWidget {
                                 builder: (context) => const CourseDetail(),
                               ));
                         },
-                        child: const ImageTitleCard(
-                            title: 'Stock Trading', imagePath: 'assets/2.jpeg'),
+                        child: ImageTitleCard(
+                          title: 'Stock Trading',
+                          imagePath: AppImages.credit_tips,
+                        ),
                       );
                     },
                   ),

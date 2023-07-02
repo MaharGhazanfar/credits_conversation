@@ -1,4 +1,4 @@
-import 'package:credit_and_conversation/model_classes/model_signup_page.dart';
+import 'package:credit_and_conversation/models/signup_model.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:firebase_core/firebase_core.dart';

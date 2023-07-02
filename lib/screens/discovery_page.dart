@@ -1,7 +1,8 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:credit_and_conversation/model_classes/model_signup_page.dart';
+import 'package:credit_and_conversation/constants/constants.dart';
+import 'package:credit_and_conversation/models/signup_model.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
@@ -13,7 +14,8 @@ import '../authentication/dbHandler.dart';
 class DiscoveryPage extends StatelessWidget {
   DiscoveryPage({Key? key}) : super(key: key);
   Map<String, dynamic>? doc;
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  static final GlobalKey<ScaffoldState> _scaffoldKey =
+      GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
@@ -501,7 +503,7 @@ class DiscoveryPage extends StatelessWidget {
                                 children: [
                                   Padding(
                                       padding: const EdgeInsets.all(4.0),
-                                      child: Image.asset('assets/1.jpeg')),
+                                      child: Image.asset(AppImages.logo)),
                                   Expanded(
                                     child: Text(
                                       'Title of Course',

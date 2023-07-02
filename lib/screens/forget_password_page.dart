@@ -1,4 +1,4 @@
-import 'package:credit_and_conversation/model_classes/model_signup_page.dart';
+import 'package:credit_and_conversation/models/signup_model.dart';
 import 'package:credit_and_conversation/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';

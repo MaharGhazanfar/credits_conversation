@@ -5,7 +5,7 @@ import 'package:credit_and_conversation/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../authentication/dbHandler.dart';
-import '../model_classes/model_signup_page.dart';
+import '../models/signup_model.dart';
 
 class AccountSettingPage extends StatelessWidget {
   const AccountSettingPage({

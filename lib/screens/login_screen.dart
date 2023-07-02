@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:credit_and_conversation/constants/app_images.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
@@ -9,7 +10,7 @@ import 'package:provider/provider.dart';
 
 import '../authentication/authentication_service.dart';
 import '../authentication/dbHandler.dart';
-import '../model_classes/model_signup_page.dart';
+import '../models/signup_model.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -58,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: mq.height * 0.25,
                           width: mq.width * 0.8,
                           alignment: Alignment.center,
-                          child: Image.asset('assets/1.jpeg')),
+                          child: Image.asset(AppImages.logo)),
                       SizedBox(
                         height: mq.height * 0.03,
                       ),
@@ -116,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: Row(
                           children: [
                             const Text(
-                              'Forget your password ? ',
+                              'Forget your password? ',
                             ),
                             TextButton(
                                 onPressed: () {

@@ -1,7 +1,8 @@
 import 'dart:developer';
 
 import 'package:badges/badges.dart' as badges;
-import 'package:credit_and_conversation/authentication/dbHandler.dart';
+import 'package:credit_and_conversation/authentication/authentication.dart';
+import 'package:credit_and_conversation/models/models.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
@@ -11,9 +12,6 @@ import 'package:intl_phone_field/country_picker_dialog.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
-
-import '../authentication/authentication_service.dart';
-import '../model_classes/model_signup_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);

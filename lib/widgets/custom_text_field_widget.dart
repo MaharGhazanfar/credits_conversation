@@ -137,15 +137,13 @@ class CustomProfileField extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: SizedBox(
                       width: textWidth,
-                      child: Text(
-                        fieldValue,
-                        maxLines: null,
-                        textAlign: TextAlign.start,
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleSmall!
-                            .copyWith(color: Colors.black),
-                      ),
+                      child: Text(fieldValue,
+                          maxLines: null,
+                          textAlign: TextAlign.start,
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleSmall!
+                              .copyWith(color: Colors.black)),
                     ),
                   )
                 ],
@@ -161,8 +159,10 @@ class CustomProfileField extends StatelessWidget {
 class ImageTitleCard extends StatelessWidget {
   final String title;
   final String imagePath;
-  // ignore: use_key_in_widget_constructors
-  const ImageTitleCard({required this.title, required this.imagePath});
+  const ImageTitleCard({
+    required this.title,
+    required this.imagePath,
+  });
 
   @override
   Widget build(BuildContext context) {

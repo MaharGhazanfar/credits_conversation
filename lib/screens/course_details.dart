@@ -1,3 +1,4 @@
+import 'package:credit_and_conversation/constants/app_images.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
@@ -218,9 +219,9 @@ class _CourseDetailState extends State<CourseDetail> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10.0),
                     child: Image.asset(
+                      AppImages.credit_tips,
                       height: mq.height * 0.2,
                       width: mq.width * 0.6,
-                      'assets/2.jpeg',
                       fit: BoxFit.fill,
                     ),
                   ),
