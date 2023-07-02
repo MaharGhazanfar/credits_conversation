@@ -1,4 +1,4 @@
-package creditandconversation.com.credit_and_conversation;
+package creditconversation.com.creditconversation;
 
 import io.flutter.embedding.android.FlutterActivity;
 
