@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:credit_and_conversation/authentication/dbHandler.dart';
+import 'package:credit_and_conversation/authentication/authentication.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';

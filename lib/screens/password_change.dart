@@ -1,13 +1,11 @@
-import 'package:credit_and_conversation/authentication/authentication_service.dart';
+import 'package:credit_and_conversation/authentication/authentication.dart';
 import 'package:credit_and_conversation/models/models.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
+import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../authentication/dbHandler.dart';
-import '../utils/contants.dart';
 
 class ChangePassword extends StatelessWidget {
   ChangePassword({

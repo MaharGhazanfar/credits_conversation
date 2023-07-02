@@ -1,11 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:credit_and_conversation/authentication/authentication.dart';
+import 'package:credit_and_conversation/models/models.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
-import 'package:credit_and_conversation/utils/contants.dart';
-import 'package:credit_and_conversation/widgets/custom_text_field_widget.dart';
+import 'package:credit_and_conversation/utils/utils.dart';
+import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-
-import '../authentication/dbHandler.dart';
-import '../models/signup_model.dart';
 
 class AccountSettingPage extends StatelessWidget {
   const AccountSettingPage({

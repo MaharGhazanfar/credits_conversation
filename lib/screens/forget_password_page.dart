@@ -1,12 +1,11 @@
-import 'package:credit_and_conversation/models/signup_model.dart';
-import 'package:credit_and_conversation/screens/splash_screen.dart';
+import 'package:credit_and_conversation/authentication/authentication.dart';
+import 'package:credit_and_conversation/models/models.dart';
+import 'package:credit_and_conversation/screens/screens.dart';
+import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:provider/provider.dart';
-
-import '../authentication/authentication_service.dart';
-import '../widgets/widgets.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});

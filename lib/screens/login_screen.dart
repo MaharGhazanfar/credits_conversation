@@ -1,16 +1,14 @@
 import 'dart:developer';
 
-import 'package:credit_and_conversation/constants/app_images.dart';
+import 'package:credit_and_conversation/authentication/authentication.dart';
+import 'package:credit_and_conversation/constants/constants.dart';
+import 'package:credit_and_conversation/models/models.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../authentication/authentication_service.dart';
-import '../authentication/dbHandler.dart';
-import '../models/signup_model.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
