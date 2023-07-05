@@ -74,7 +74,6 @@ class CustomGoldenButton extends StatelessWidget {
   final void Function() onPressed;
   final double? width;
   final double? height;
-  // final TextStyle? style;
   double? fontSize;
   Color? txtColor;
 
@@ -85,7 +84,6 @@ class CustomGoldenButton extends StatelessWidget {
       this.width,
       this.fontSize,
       this.txtColor,
-      // this.style = const TextStyle(color: Colors.black87, fontSize: this.fontSize),
       this.height})
       : super(key: key);
 
