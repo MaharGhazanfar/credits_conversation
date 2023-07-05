@@ -74,14 +74,18 @@ class CustomGoldenButton extends StatelessWidget {
   final void Function() onPressed;
   final double? width;
   final double? height;
-  final TextStyle? style;
+  // final TextStyle? style;
+  double? fontSize;
+  Color? txtColor;
 
-  const CustomGoldenButton(
+  CustomGoldenButton(
       {Key? key,
       required this.buttonTitle,
       required this.onPressed,
       this.width,
-      this.style = const TextStyle(color: Colors.black87),
+      this.fontSize,
+      this.txtColor,
+      // this.style = const TextStyle(color: Colors.black87, fontSize: this.fontSize),
       this.height})
       : super(key: key);
 
@@ -93,7 +97,13 @@ class CustomGoldenButton extends StatelessWidget {
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
           onPressed: onPressed,
-          child: Text(buttonTitle, style: style)),
+          child: Text(
+            buttonTitle,
+            style: TextStyle(
+              fontSize: fontSize ?? 18,
+              color: txtColor ?? Colors.black,
+            ),
+          )),
     );
   }
 }

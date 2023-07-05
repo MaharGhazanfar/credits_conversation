@@ -68,7 +68,7 @@ class _SignUpPageState extends State<SignUpPage> {
     final DateTime? picked = await showDatePicker(
         context: context,
         initialDate: DateTime.now(),
-        firstDate: DateTime(2000, 8),
+        firstDate: DateTime(1970, 8),
         lastDate: DateTime(2101));
     if (picked != null) {
       log(DateFormat("yyyy-MM-dd").format(picked));
@@ -245,7 +245,6 @@ class _SignUpPageState extends State<SignUpPage> {
                         prefixIcon: Icons.calendar_month_sharp,
                         onTap: () async {
                           _focusNode.unfocus();
-
                           _showDatePicker(context);
                         },
                       ),

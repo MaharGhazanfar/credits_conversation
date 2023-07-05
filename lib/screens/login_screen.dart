@@ -96,8 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                             }
                           },
                           suffix: InkWell(
-                            onTapDown: (details) => value.isObscure = false,
-                            onTapUp: (details) => value.isObscure = true,
+                            onTap: () => value.isObscure != value.isObscure,
                             radius: 5,
                             child: Icon(
                               color: goldenColor,

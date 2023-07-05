@@ -46,6 +46,11 @@ ThemeData appTheme() {
     iconTheme: IconThemeData(
       color: goldenColor,
     ),
+    datePickerTheme: DatePickerThemeData(
+      backgroundColor: Colors.amber,
+      shadowColor: Colors.black,
+      headerBackgroundColor: Colors.blue,
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: goldenColor,

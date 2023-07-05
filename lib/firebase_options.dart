@@ -50,20 +50,21 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDUONACVLX7ahvyiJ1LgaR9v8nNuyucwF0',
-    appId: '1:550721124395:android:404cb7802fd999ec7b126e',
-    messagingSenderId: '550721124395',
-    projectId: 'credit-conversation',
-    storageBucket: 'credit-conversation.appspot.com',
+    apiKey: 'AIzaSyBf2wud201utBFU7SrBf_J-eqvqKMnADNA',
+    appId: '1:106105676686:android:fd23e3f3201f4b246cbadf',
+    messagingSenderId: '106105676686',
+    projectId: 'credit-converstion',
+    storageBucket: 'credit-converstion.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAazUsSXqwqqIccMHotgsNAoAYrUXpjbkA',
-    appId: '1:550721124395:ios:3fcfa38558a6de637b126e',
-    messagingSenderId: '550721124395',
-    projectId: 'credit-conversation',
-    storageBucket: 'credit-conversation.appspot.com',
-    iosClientId: '550721124395-lqr9k1htfl0srjnpokr8q49f164bta01.apps.googleusercontent.com',
-    iosBundleId: 'creditandconversation.com.creditAndConversation',
+    apiKey: 'AIzaSyBgA6i_IHPE6aayOkgcp3XY1xS16d6mEfA',
+    appId: '1:106105676686:ios:f25a379f8dcb05036cbadf',
+    messagingSenderId: '106105676686',
+    projectId: 'credit-converstion',
+    storageBucket: 'credit-converstion.appspot.com',
+    androidClientId: '106105676686-0m6emu73tgr5a2gs6qoih5n7h4eb3501.apps.googleusercontent.com',
+    iosClientId: '106105676686-77ei8hc1f6se9egpijfree7lkh6j2i48.apps.googleusercontent.com',
+    iosBundleId: 'creditconversation.com.creditsConversation',
   );
 }

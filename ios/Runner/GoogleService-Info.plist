@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>550721124395-lqr9k1htfl0srjnpokr8q49f164bta01.apps.googleusercontent.com</string>
+	<string>106105676686-77ei8hc1f6se9egpijfree7lkh6j2i48.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.550721124395-lqr9k1htfl0srjnpokr8q49f164bta01</string>
+	<string>com.googleusercontent.apps.106105676686-77ei8hc1f6se9egpijfree7lkh6j2i48</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>106105676686-0m6emu73tgr5a2gs6qoih5n7h4eb3501.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAazUsSXqwqqIccMHotgsNAoAYrUXpjbkA</string>
+	<string>AIzaSyBgA6i_IHPE6aayOkgcp3XY1xS16d6mEfA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>550721124395</string>
+	<string>106105676686</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>creditandconversation.com.creditAndConversation</string>
+	<string>creditconversation.com.creditsConversation</string>
 	<key>PROJECT_ID</key>
-	<string>credit-conversation</string>
+	<string>credit-converstion</string>
 	<key>STORAGE_BUCKET</key>
-	<string>credit-conversation.appspot.com</string>
+	<string>credit-converstion.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:550721124395:ios:3fcfa38558a6de637b126e</string>
+	<string>1:106105676686:ios:f25a379f8dcb05036cbadf</string>
 </dict>
 </plist>

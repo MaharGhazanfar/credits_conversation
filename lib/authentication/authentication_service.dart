@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:credit_and_conversation/authentication/authentication.dart';
@@ -7,6 +8,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:image_picker/image_picker.dart';
 
 class AuthenticationService {
@@ -110,5 +112,41 @@ class AuthenticationService {
         backgroundColor: goldenColor,
         textColor: Colors.white,
         fontSize: fontSize);
+  }
+
+  static Future<String> signOut() async {
+    final String providerID =
+        FirebaseAuth.instance.currentUser!.providerData.first.providerId;
+    // log('providerID = $providerID');
+    switch (providerID) {
+      case 'google.com':
+        log('case google.com');
+        try {
+          await GoogleSignIn().disconnect().then((value) async {
+            await FirebaseAuth.instance.signOut().asStream();
+          });
+          return 'Success';
+        } catch (e) {
+          return 'Could not log out';
+        }
+      case 'facebook.com':
+        log('case facebook.com');
+        try {
+          await FacebookAuth.instance.logOut().then((value) async {
+            FirebaseAuth.instance.signOut().asStream();
+          });
+          return 'Success';
+        } catch (e) {
+          return 'Could not log out';
+        }
+      default:
+        log('case password or apple');
+        try {
+          await FirebaseAuth.instance.signOut().asStream();
+          return 'Success';
+        } catch (e) {
+          return 'Could not log out';
+        }
+    }
   }
 }

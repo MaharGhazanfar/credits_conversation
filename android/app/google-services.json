@@ -1,34 +1,49 @@
 {
   "project_info": {
-    "project_number": "550721124395",
-    "project_id": "credit-conversation",
-    "storage_bucket": "credit-conversation.appspot.com"
+    "project_number": "106105676686",
+    "project_id": "credit-converstion",
+    "storage_bucket": "credit-converstion.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:550721124395:android:404cb7802fd999ec7b126e",
+        "mobilesdk_app_id": "1:106105676686:android:fd23e3f3201f4b246cbadf",
         "android_client_info": {
           "package_name": "creditconversation.com.creditconversation"
         }
       },
       "oauth_client": [
         {
-          "client_id": "550721124395-uh9471ec6c0vgcm0754tdcogvdbh3jbe.apps.googleusercontent.com",
+          "client_id": "106105676686-0m6emu73tgr5a2gs6qoih5n7h4eb3501.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "creditconversation.com.creditconversation",
+            "certificate_hash": "5299c1c0fbea052e2635bebef010765f9b0b4f62"
+          }
+        },
+        {
+          "client_id": "106105676686-rikp8jeslp7edb6lb6m5990nke8bttmj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDUONACVLX7ahvyiJ1LgaR9v8nNuyucwF0"
+          "current_key": "AIzaSyBf2wud201utBFU7SrBf_J-eqvqKMnADNA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "550721124395-uh9471ec6c0vgcm0754tdcogvdbh3jbe.apps.googleusercontent.com",
+              "client_id": "106105676686-1ukqc1nhmpli0hrk97nq90f1gt0098lr.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "106105676686-77ei8hc1f6se9egpijfree7lkh6j2i48.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "creditconversation.com.creditsConversation"
+              }
             }
           ]
         }
