@@ -1,6 +1,5 @@
 import 'package:credit_and_conversation/constants/constants.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
-import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:credit_and_conversation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 

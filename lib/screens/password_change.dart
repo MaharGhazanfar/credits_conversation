@@ -1,4 +1,5 @@
 import 'package:credit_and_conversation/authentication/authentication.dart';
+import 'package:credit_and_conversation/constants/constants.dart';
 import 'package:credit_and_conversation/models/models.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
@@ -182,7 +183,7 @@ class ChangePassword extends StatelessWidget {
 
                               modelSignUpPage.isLoading = false;
                               modelSignUpPage.opacity = 1.0;
-                              AuthenticationService.ShowCustomToast(
+                              AppToast.ShowCustomToast(
                                   msg: 'Password updated successfully');
 
                               Navigator.of(context).pop();
@@ -190,12 +191,12 @@ class ChangePassword extends StatelessWidget {
                               if (e.code == 'wrong-password') {
                                 modelSignUpPage.isLoading = false;
                                 modelSignUpPage.opacity = 1.0;
-                                AuthenticationService.ShowCustomToast(
+                                AppToast.ShowCustomToast(
                                     msg: 'The current password is incorrect');
                               } else {
                                 modelSignUpPage.isLoading = false;
                                 modelSignUpPage.opacity = 1.0;
-                                AuthenticationService.ShowCustomToast(
+                                AppToast.ShowCustomToast(
                                     msg:
                                         'An error occurred. Please try again later.');
                               }

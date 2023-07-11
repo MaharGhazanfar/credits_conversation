@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:badges/badges.dart' as badges;
 import 'package:credit_and_conversation/authentication/authentication.dart';
+import 'package:credit_and_conversation/constants/constants.dart';
 import 'package:credit_and_conversation/models/models.dart';
 import 'package:credit_and_conversation/screens/screens.dart';
 import 'package:credit_and_conversation/utils/utils.dart';
@@ -101,13 +102,13 @@ class _SignUpPageState extends State<SignUpPage> {
                         onTap: () async {
                           var status = await Permission.storage.request();
                           if (status.isGranted) {
-                            modelSignUpPage.image = await AuthenticationService
-                                .pickImageFromMedia();
+                            modelSignUpPage.image =
+                                await PickImage.pickImageFromMedia();
                             setState(() {
                               if (modelSignUpPage.image != null) {
                                 return null;
                               } else {
-                                AuthenticationService.ShowCustomToast(
+                                AppToast.ShowCustomToast(
                                     msg: 'No Image selected');
                               }
                             });
@@ -370,9 +371,9 @@ class _SignUpPageState extends State<SignUpPage> {
                                         email: emailController.text);
 
                                 if (status == 'Account created') {
-                                  var imgPath =
-                                      await AuthenticationService.uploadImage(
-                                          modelSignUpPage.image);
+                                  var imgPath = await PickImage.uploadImage(
+                                    modelSignUpPage.image,
+                                  );
                                   var createdUser = ModelSignUpPage(
                                       firstName: firstNameController.text,
                                       lastName: lastNameController.text,
@@ -401,17 +402,15 @@ class _SignUpPageState extends State<SignUpPage> {
                                   modelSignUpPage.isLoading = false;
                                   modelSignUpPage.opacity = 1.0;
 
-                                  AuthenticationService.ShowCustomToast(
-                                      msg: status);
+                                  AppToast.ShowCustomToast(msg: status);
                                 }
                               } else {
-                                AuthenticationService.ShowCustomToast(
+                                AppToast.ShowCustomToast(
                                     msg: 'Please select your gender');
                               }
                             }
                           } else {
-                            AuthenticationService.ShowCustomToast(
-                                msg: 'Please pick image');
+                            AppToast.ShowCustomToast(msg: 'Please pick image');
                           }
                         },
                       ),

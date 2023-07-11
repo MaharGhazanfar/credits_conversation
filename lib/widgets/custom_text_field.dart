@@ -1,6 +1,6 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, must_be_immutable
 
-import 'package:credit_and_conversation/utils/utils.dart';
+import 'package:credit_and_conversation/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {

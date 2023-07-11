@@ -1,15 +1,8 @@
 import 'dart:developer';
-import 'dart:io';
 
-import 'package:credit_and_conversation/authentication/authentication.dart';
-import 'package:credit_and_conversation/utils/utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:image_picker/image_picker.dart';
 
 class AuthenticationService {
   static Future<UserCredential> signInWithFacebook() async {
@@ -74,44 +67,6 @@ class AuthenticationService {
         return 'Something went wrong';
       }
     }
-  }
-
-  static Future<String> uploadImage(File imageFile) async {
-    var firebaseStorageRef = FirebaseStorage.instance.ref();
-    // var random = Random();
-    //
-    // var upload =
-    //     firebaseStorageRef.child('Profiles/${random.nextInt(900000) + 100000}');
-    var upload = firebaseStorageRef.child('Profiles/${DBHandler.userUid}');
-    await upload.putFile(imageFile);
-
-    return upload.getDownloadURL();
-  }
-
-  static Future<File> pickImageFromMedia() async {
-    File? image;
-
-    final ImagePicker picker = ImagePicker();
-
-    final XFile? photo = await picker.pickImage(
-        source: ImageSource.gallery,
-        maxWidth: 250,
-        maxHeight: 250,
-        imageQuality: 80);
-
-    image = File(photo!.path);
-
-    return image;
-  }
-
-  static ShowCustomToast({required String msg, double? fontSize = 16}) {
-    Fluttertoast.showToast(
-        msg: msg,
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.BOTTOM,
-        backgroundColor: goldenColor,
-        textColor: Colors.white,
-        fontSize: fontSize);
   }
 
   static Future<String> signOut() async {

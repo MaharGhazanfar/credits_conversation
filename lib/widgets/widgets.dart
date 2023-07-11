@@ -1,2 +1,2 @@
-export 'custom_text_field_widget.dart';
+export 'custom_text_field.dart';
 export 'progress_indicator.dart';

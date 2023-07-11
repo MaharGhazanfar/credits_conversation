@@ -1,2 +1,2 @@
-export 'authentication_service.dart';
+export 'firebase_services.dart';
 export 'dbHandler.dart';

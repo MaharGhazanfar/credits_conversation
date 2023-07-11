@@ -1,4 +1,4 @@
-import 'package:credit_and_conversation/utils/utils.dart';
+import 'package:credit_and_conversation/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class ShowProgressIndicator extends StatelessWidget {

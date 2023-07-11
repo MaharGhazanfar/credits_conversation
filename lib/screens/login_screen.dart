@@ -53,11 +53,12 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                          margin: EdgeInsets.only(top: mq.height * 0.05),
-                          height: mq.height * 0.25,
-                          width: mq.width * 0.8,
-                          alignment: Alignment.center,
-                          child: Image.asset(AppImages.logo)),
+                        margin: EdgeInsets.only(top: mq.height * 0.05),
+                        height: mq.height * 0.25,
+                        width: mq.width * 0.8,
+                        alignment: Alignment.center,
+                        child: Image.asset(AppImages.logo),
+                      ),
                       SizedBox(
                         height: mq.height * 0.03,
                       ),
@@ -96,14 +97,15 @@ class _LoginPageState extends State<LoginPage> {
                             }
                           },
                           suffix: InkWell(
-                            onTap: () => value.isObscure != value.isObscure,
+                            onTap: () {
+                              value.isObscure = !value.isObscure;
+                            },
                             radius: 5,
                             child: Icon(
                               color: goldenColor,
                               value.isObscure
                                   ? Icons.visibility_off
                                   : Icons.visibility,
-                              //color: Colors.white,
                             ),
                           ),
                         ),
@@ -140,23 +142,24 @@ class _LoginPageState extends State<LoginPage> {
                           if (globalKey.currentState!.validate()) {
                             modelSignUpPage.isLoading = true;
                             modelSignUpPage.opacity = 0.5;
-
-                            var status =
+                            final String authStatus =
                                 await AuthenticationService.signInWithEmail(
-                                    password: passwordController.text,
-                                    email: emailController.text);
+                              password: passwordController.text,
+                              email: emailController.text,
+                            );
 
                             modelSignUpPage.isLoading = false;
                             modelSignUpPage.opacity = 1.0;
 
-                            if (status == 'Login Successful') {
+                            if (authStatus == 'Login Successful') {
                               Navigator.of(context).pushAndRemoveUntil(
                                   MaterialPageRoute(
                                       builder: (context) => DiscoveryPage()),
                                   (Route<dynamic> route) => false);
                             } else {
-                              AuthenticationService.ShowCustomToast(
-                                  msg: status);
+                              AppToast.ShowCustomToast(
+                                msg: authStatus,
+                              );
                             }
                           }
                         },
@@ -235,7 +238,7 @@ class _LoginPageState extends State<LoginPage> {
                                               DiscoveryPage()),
                                       (Route<dynamic> route) => false);
                                 } else {
-                                  AuthenticationService.ShowCustomToast(
+                                  AppToast.ShowCustomToast(
                                       msg: 'Something went wrong');
                                 }
 
